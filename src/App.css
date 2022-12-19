@@ -26,6 +26,7 @@
     height: 500px;
     width: 500px;
     margin: auto;
+    box-shadow: 12px 12px 12px 12px #f5f4f4;
 }
 
 .main-header-cls{
@@ -34,4 +35,30 @@
 
 .sub-header-cls {
   color: #34343e;
+}
+
+.airport-details-wrapper {
+  border:  none;
+}
+
+.airport-details {
+  padding:  10px;
+}
+
+.label-cls {
+  font-weight: bold;
+}
+
+.buttons {
+  padding: 5px;
+  color: #fff;
+  width: 80px;
+  border-radius: 5px;
+  background: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-wrap {
+  margin: 50px 0;
 }

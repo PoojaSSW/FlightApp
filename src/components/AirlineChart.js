@@ -54,7 +54,7 @@ const AirlineChart = ({
              }}
              angle={270} 
              position="insideLeft"
-             value={"Distance (min)"} />
+             value={"Distance (km)"} />
           </YAxis>
           <ZAxis
             type="number"

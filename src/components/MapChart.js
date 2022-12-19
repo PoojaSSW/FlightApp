@@ -3,8 +3,9 @@ import "../App.css";
 import AirlineChart from "../components/AirlineChart";
 import AiportBusyMap from "../components/AiportBusyMap";
 import AllAirportDataMap from "../components/AllAirportDataMap";
+import AirportDetailsModal from "../components/AirportDetailsModal";
 import Modal from 'react-modal';
-import {get} from "lodash";
+
 import airports from "../json/airports.json";
 import flights from "../json/flights.json";
 
@@ -43,25 +44,16 @@ const MapChart = () => {
          <h1 className="main-header-cls">Plan your optimal vacation!</h1>
          <AllAirportDataMap airportMarkers={airportMarkers} selectedMarker={selectedMarker} onAirportMarkerSelection={onSelectAirportMarker.bind(this)}/>
          <div className="data-visual-wrapper">
-            <AiportBusyMap openDestinationAirportDetails={onSelectAirportDataMarker.bind(this)} airportMarkers={airportMarkers}/>
+            <AiportBusyMap openDestinationAirportDetails={onSelectAirportDataMarker.bind(this)} airportMarkers={airportMarkers} />
             <AirlineChart airlineData={destinedFlightsToAirports} marker = {selectedMarker}/>
             <Modal isOpen={modalIsOpen} closeModal= {closeModal.bind(this)}>
-              <div>
-                  <div>
-                      {selectedMarker && 
-                        <div>
-                        <label>Origin AIRPORT:</label>
-                        <span>{get(selectedMarker, "[0].AIRPORT")}</span>
-                         </div>}
-                      <div><label>Name:</label><span>{airportDataMarker?.AIRPORT}</span></div>
-                      <div><label>City:</label><span>{airportDataMarker?.CITY}</span></div>
-                      <div><label>State:</label><span>{airportDataMarker?.STATE}</span></div>
-                  </div>
-                  <button className="buttons" onClick={closeModal.bind(this)}>Close</button>
-              </div>
-          </Modal>
+              <AirportDetailsModal airportDataMarker={airportDataMarker} 
+                  destinationAirports={destinedFlightsToAirports} 
+                  selectedMarker={selectedMarker}
+                  closeDialog={closeModal}/>
+            </Modal>
         </div>
-        <button onClick={resetData.bind(this)}>Reset</button>
+        <button className="buttons" onClick={resetData.bind(this)}>Reset</button>
     </React.Fragment>
   );
 };

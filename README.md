@@ -22,10 +22,11 @@ For the selected origin airport, visualizes a distribution of airlines that offe
 
 ## Design
 For **Airport congestion distribution** I used a map visual to easily discover the sirport location on a map and provide a realistic view of data for user.
-For **Airline delays and cancellation distribution** I used charting lib to emphasize to showcase the distance from the origin and posiible issues(AIRLINE_DELAY). 2 variables can be depicted in the same chart therby providing transperancy in the data and visual.
+For **Airline delays and cancellation distribution** I used charting lib to emphasize to showcase the distance from the origin and posiible issues(AIRLINE_DELAY). Two variables are depicted in the same chart thereby providing transperancy in the data and visual.
 
 ## Implementation Details
 Components: I've built this app using ReactJs/JavaScript and CSS. The components are organized in a way that'll signify each functionality and its usage.
+
 Libraries: React Simple Maps (https://www.react-simple-maps.io/)
            Recharts (https://recharts.org/)
            Modal (https://www.npmjs.com/package/react-modal)
@@ -33,8 +34,14 @@ Libraries: React Simple Maps (https://www.react-simple-maps.io/)
 
 ### Build Instructions
 #cd FlightApp
+
+
 #npm install
+
+
 #npm run build - (to get production build)
+
+
 #npm start
 
 ### Deploy 
