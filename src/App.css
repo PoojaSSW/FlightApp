@@ -1,24 +1,37 @@
 .App {
   text-align: center;
-  width: 50%;
-  margin: auto auto;
-}
-
-.text-cls {
-  font-size: 10px;
+  width: 100%;
 }
 
 .data-visual-wrapper {
-  display:  flex;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .airport-stats-wrapper {
-  width:  100%;
+  width: 50%;
+  margin: auto;
 }
 
+.airport-map-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.congestion-wrapper {
+  width:  50%;
+}
 
 .ReactModal__Content.ReactModal__Content--after-open {
     height: 500px;
     width: 500px;
     margin: auto;
+}
+
+.main-header-cls{
+  color: #686868;
+}
+
+.sub-header-cls {
+  color: #34343e;
 }
