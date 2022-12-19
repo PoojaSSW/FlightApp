@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+  width: 50%;
+  margin: auto auto;
+}
+
+.text-cls {
+  font-size: 10px;
+}
+
+.data-visual-wrapper {
+  display:  flex;
+}
+
+.airport-stats-wrapper {
+  width:  100%;
+}
+
+
+.ReactModal__Content.ReactModal__Content--after-open {
+    height: 500px;
+    width: 500px;
+    margin: auto;
+}
