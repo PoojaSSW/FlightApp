@@ -42,7 +42,7 @@ const AllAirportDataMap = ({
   }
   return (
     <div className="airport-stats-wrapper">
-        <h3 className="sub-header-cls">Select your origin airport to begin</h3>
+        <h3 className="sub-header-cls">Select your origin airport to begin...</h3>
         <ComposableMap projection="geoAlbersUsa">
           <Geographies geography={geoUrl}>
             {({ geographies }) => (

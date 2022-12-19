@@ -21,7 +21,7 @@ const AirlineChart = ({
 })=> {
   return (
     <div className="airport-map-wrapper">
-        <h3 className="sub-header-cls">Distribution of probable airlines by congestion</h3>
+        <h3 className="sub-header-cls">Distribution of probable airlines by congestion.</h3>
         <ScatterChart
           width={400}
           height={400}

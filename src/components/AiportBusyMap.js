@@ -29,7 +29,7 @@ const AiportBusyMap = ({
   }
   return (
     <div className="airport-map-wrapper congestion-wrapper">
-       <h3 className="sub-header-cls">Distribution of probable airports by congestion</h3>
+       <h3 className="sub-header-cls">Distribution of probable airports by congestion.</h3>
        <ComposableMap projection="geoAlbersUsa">
           <Geographies geography={geoUrl}>
             {({ geographies }) => (
