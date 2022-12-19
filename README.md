@@ -1,91 +1,49 @@
-As a user, I want to see all the flight paths in the USA, so that I can get an overall picture of all the flight paths
+# US Vacation Optimizer
 
-As a user, I want to find the busiest airports in the USA, so that I can figure out the airports to avoid while planning a trip during a busy season
+## Overview
+The US Vacation Optimizer is a data visualization app, that uses the [2015 Flight Delays and Cancellations](https://www.kaggle.com/datasets/usdot/flight-delays) data from Kaggle to 
+help you select an optimal vacation destination in the United States.
 
-As a user, I want to find the airports with the most  delays, so that I can plan for it in advance, if I choose to fly there.
+It starts off by displaying all the airports on the United States map. Users can select an origin airport from the map, to find an optimal destination using one of two charts:
 
-As a user, I want to find the airlines with the most delays, and the most cancellations, so that I can avoid them while planning a trip
+1. **Airport congestion distribution**
+For the selected origin airport, visualizes a distribution of airports by congestion using a <> chart. For an optimal experience, users should prefer airports with the least congestion 
+(or the smallest bubbles in this chart.
 
-As a user, given my origin airport, I want to find all the possible routes from the airport, so that I can plan a trip from my city for a vacation
+1. **Airline delays and cancellation distribution**
+For the selected origin airport, visualizes a distribution of airlines that offer routes to various destinations, using a <> chart. For an optimal experience, users should prefer airports with the least 
+least distance and least cancellations, located towards the origin of the chart. The further you go on the X or Y axes, the less optimal the airline experience.
 
-As a user, I want to get a list of recommended destinations and routes from an origin airport in order of priority (based on minimum delays and cancellations, both of the airport and airlines), so that I can quickly plan a trip from the origin.
+### User Journeys/Use Cases
+
+1. As a user, I want to see all the airports in the USA, so that I can find all the probable vacation destinations
+
+1. As a user, I want to find the busiest airports in the USA from a selected origin airport, so that I can figure out the airports to avoid while planning a trip during a busy season
+
+1. As a user, I want to find the airlines with the most delays, and the most cancellations, so that I can avoid them while planning a trip
 
 
+## Design
 
 
+## Implementation Details
+Components, libraries
+
+### Build Instructions
+
+### Deploy 
+The site is set to automatically deploy using Netfliy at vacation-optimizer.netlify.app
 
 
+## Future work
+There are several ways in which the app could be improved, broadly categorized into feature functionality and implementation improvements.
 
+### Feature Functionality
+1. Show routes on the map and allow users to interact with a route to find more details about it
+1. Make the app take seasonality into account, since the congestion of airports and cancellation/delay rates of airlines can vary significantly based on the season
+1. Introduce cost of air ticket as a variable to optimize
+1. Considering all the variables, recommend the top 3 optimal destinations from an origin
 
-
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Implementation 
+1. Use Redux for <>
+1. 
