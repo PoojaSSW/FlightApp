@@ -41,7 +41,7 @@ const MapChart = () => {
 
   return (
     <React.Fragment>
-         <h1 className="main-header-cls">Plan your optimal vacation!</h1>
+         <h1 className="main-header-cls">Plan your optimal vacation anywhere in USA!</h1>
          <AllAirportDataMap airportMarkers={airportMarkers} selectedMarker={selectedMarker} onAirportMarkerSelection={onSelectAirportMarker.bind(this)}/>
          <div className="data-visual-wrapper">
             <AiportBusyMap openDestinationAirportDetails={onSelectAirportDataMarker.bind(this)} airportMarkers={airportMarkers} />
